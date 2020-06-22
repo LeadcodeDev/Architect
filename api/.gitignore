@@ -4,5 +4,4 @@ coverage
 .vscode
 .DS_STORE
 .next
-.env
 tmp
