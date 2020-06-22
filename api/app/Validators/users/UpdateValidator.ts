@@ -30,7 +30,8 @@ export default class UpdateValidator {
 		password: schema.string.optional({ trim: true }, [rules.confirmed()]),
 		address: schema.string.optional(),
 		postalcode: schema.string.optional(),
-		city: schema.string.optional()
+		city: schema.string.optional(),
+		isConfirmed: schema.boolean.optional()
 	})
 
 	/**

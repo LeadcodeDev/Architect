@@ -28,6 +28,12 @@ export default class Users extends BaseModel {
 	public city: string
 
 	@column()
+	public tokenConfirmed: string
+
+	@column()
+	public isConfirmed: boolean
+
+	@column()
 	public rememberMeToken?: string
 
 	@column.dateTime({ autoCreate: true })
