@@ -1,6 +1,6 @@
 {
 	"name": "core",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"build": "node ace build",
@@ -16,11 +16,11 @@
 	},
 	"dependencies": {
 		"@adonisjs/ace": "^6.9.3",
-		"@adonisjs/auth": "^4.1.5",
+		"@adonisjs/auth": "^4.2.2",
 		"@adonisjs/core": "^5.0.0-preview-rc-1.6",
 		"@adonisjs/fold": "^6.3.5",
-		"@adonisjs/lucid": "^8.1.1",
-		"@adonisjs/session": "^3.0.3",
+		"@adonisjs/lucid": "^8.2.2",
+		"@adonisjs/session": "^3.0.4",
 		"jsonwebtoken": "^8.5.1",
 		"mysql": "^2.18.1",
 		"proxy-addr": "^2.0.6",

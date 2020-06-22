@@ -17,7 +17,7 @@ import { HashConfig } from '@ioc:Adonis/Core/Hash'
 |
 */
 const hashConfig: HashConfig = {
-  /*
+	/*
   |--------------------------------------------------------------------------
   | Default hasher
   |--------------------------------------------------------------------------
@@ -26,10 +26,10 @@ const hashConfig: HashConfig = {
   | free to change the default value
   |
   */
-  default: 'bcrypt',
+	default: 'argon',
 
-  list: {
-    /*
+	list: {
+		/*
     |--------------------------------------------------------------------------
     | Argon
     |--------------------------------------------------------------------------
@@ -42,16 +42,16 @@ const hashConfig: HashConfig = {
     | npm install @phc/argon2@"<2.0.0"
     |
     */
-    argon: {
-      driver: 'argon2',
-      variant: 'id',
-      iterations: 3,
-      memory: 4096,
-      parallelism: 1,
-      saltSize: 16,
-    },
+		argon: {
+			driver: 'argon2',
+			variant: 'id',
+			iterations: 3,
+			memory: 4096,
+			parallelism: 1,
+			saltSize: 16
+		},
 
-    /*
+		/*
     |--------------------------------------------------------------------------
     | Bcrypt
     |--------------------------------------------------------------------------
@@ -64,11 +64,11 @@ const hashConfig: HashConfig = {
     | npm install @phc/bcrypt@"<2.0.0"
     |
     */
-    bcrypt: {
-      driver: 'bcrypt',
-      rounds: 10,
-    },
-  },
+		bcrypt: {
+			driver: 'bcrypt',
+			rounds: 10
+		}
+	}
 }
 
 export default hashConfig

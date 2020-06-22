@@ -52,7 +52,7 @@
     picomatch "^2.2.2"
     slash "^3.0.0"
 
-"@adonisjs/auth@^4.1.5":
+"@adonisjs/auth@^4.2.2":
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@adonisjs/auth/-/auth-4.2.2.tgz#d00f362335d95ebb6cda23c7141cd79b933609f3"
   integrity sha512-I1/V6R7HbO5fc2WfH5/JvlGwtJbvvfJvpm/AtzUFaLPCqxd4bIe/QmqqNGEAfzJsfbUTSxFpM2hTM4Mr/+/5Hg==
@@ -192,7 +192,7 @@
     abstract-logging "^2.0.0"
     pino "^6.3.2"
 
-"@adonisjs/lucid@^8.1.1":
+"@adonisjs/lucid@^8.2.2":
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/@adonisjs/lucid/-/lucid-8.2.2.tgz#fd7d1ac56abdabcd098bedb25e0c332952e18d6c"
   integrity sha512-xYcBstcOsCiTu4Ce/5g/U+ckbD+r/7pyFntMW5N5PYF0Xj2+6fCeMDu0SHEaXpXCdCfkgjwA2NqVZAuse2+o7Q==
@@ -221,7 +221,7 @@
     cuid "^2.1.8"
     jest-worker "^26.0.0"
 
-"@adonisjs/session@^3.0.3":
+"@adonisjs/session@^3.0.4":
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/@adonisjs/session/-/session-3.0.4.tgz#fb14fba61e46154ac2e311a55896788cb7ae1329"
   integrity sha512-L5V8u+ZJEo6ppWEPjTFC+VTvUNaDxs1jvky5LHkZofB9Ry/u51qqWtOBCqC+zCcP7UyxrzM2HKLm6uj0JDjn4w==
