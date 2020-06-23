@@ -8,7 +8,7 @@
 import { CorsConfig } from '@ioc:Adonis/Core/Cors'
 
 const corsConfig: CorsConfig = {
-  /*
+	/*
   |--------------------------------------------------------------------------
   | Enabled
   |--------------------------------------------------------------------------
@@ -20,11 +20,11 @@ const corsConfig: CorsConfig = {
   | you can define a function to enable/disable it on per request basis as well.
   |
   */
-  enabled: false,
+	enabled: true,
 
-  // enabled: (request) => request.url().startsWith('/api')
+	// enabled: (request) => request.url().startsWith('/api')
 
-  /*
+	/*
   |--------------------------------------------------------------------------
   | Origin
   |--------------------------------------------------------------------------
@@ -43,9 +43,9 @@ const corsConfig: CorsConfig = {
   |                     one of the above values.
   |
   */
-  origin: true,
+	origin: true,
 
-  /*
+	/*
   |--------------------------------------------------------------------------
   | Methods
   |--------------------------------------------------------------------------
@@ -55,9 +55,9 @@ const corsConfig: CorsConfig = {
   |
   | Following is the list of default methods. Feel free to add more.
   */
-  methods: ['GET', 'HEAD', 'POST'],
+	methods: ['GET', 'HEAD', 'POST'],
 
-  /*
+	/*
   |--------------------------------------------------------------------------
   | Headers
   |--------------------------------------------------------------------------
@@ -74,9 +74,9 @@ const corsConfig: CorsConfig = {
   | Function          - Receives the current header and should return one of the above values.
   |
   */
-  headers: true,
+	headers: true,
 
-  /*
+	/*
   |--------------------------------------------------------------------------
   | Expose Headers
   |--------------------------------------------------------------------------
@@ -96,16 +96,9 @@ const corsConfig: CorsConfig = {
   | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers
   |
   */
-  exposeHeaders: [
-    'cache-control',
-    'content-language',
-    'content-type',
-    'expires',
-    'last-modified',
-    'pragma',
-  ],
+	exposeHeaders: ['cache-control', 'content-language', 'content-type', 'expires', 'last-modified', 'pragma'],
 
-  /*
+	/*
   |--------------------------------------------------------------------------
   | Credentials
   |--------------------------------------------------------------------------
@@ -116,9 +109,9 @@ const corsConfig: CorsConfig = {
   | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials
   |
   */
-  credentials: true,
+	credentials: true,
 
-  /*
+	/*
   |--------------------------------------------------------------------------
   | MaxAge
   |--------------------------------------------------------------------------
@@ -127,7 +120,7 @@ const corsConfig: CorsConfig = {
   | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age
   |
   */
-  maxAge: 90,
+	maxAge: 90
 }
 
 export default corsConfig
