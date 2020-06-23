@@ -28,4 +28,5 @@ Route.group(() => {
 	Route.post('authentication/login', 'AuthController.login')
 	Route.post('authentication/logout', 'AuthController.logout')
 	Route.get('authentication/confirmation_token/:token', 'UsersController.confirmAccount')
+	Route.post('cookie', 'CookiesController.allow')
 }).prefix('/api')
