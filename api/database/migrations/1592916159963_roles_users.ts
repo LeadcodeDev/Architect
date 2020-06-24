@@ -5,8 +5,8 @@ export default class RolesUsers extends BaseSchema {
 
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
-        table.integer("user").unsigned().references("id").inTable("users")
-        table.integer("role").unsigned().references("id").inTable("roles")
+        table.integer("users_id").unsigned().references("id").inTable("users")
+        table.integer("roles_id").unsigned().references("id").inTable("roles")
     })
   }
 
