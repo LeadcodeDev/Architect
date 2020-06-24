@@ -12,7 +12,12 @@ export default class UsersController {
 	}
 
 	public async show({ params }) {
-		return Users.find(params.id)
+		console.log(params.id)
+		
+		return Users.query()
+			.where('id', params.id)
+			.preload("roles")
+			.firstOrFail()
 	}
 
 	public async store({ request }: HttpContextContract) {
