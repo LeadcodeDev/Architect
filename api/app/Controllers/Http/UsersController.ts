@@ -11,8 +11,17 @@ export default class UsersController {
 		return Users.all()
 	}
 
-	public async show({ params }) {
-		return Users.find(params.id)
+	public async show({ params }: HttpContextContract) {
+		
+		const user = await Users.query()
+			.where("id", params.id)
+			.preload("roles", (rolesQuery) => {
+				rolesQuery.preload("permissions")
+			})
+			.firstOrFail()
+
+		return user.serialize()
+		
 	}
 
 	public async store({ request }: HttpContextContract) {
