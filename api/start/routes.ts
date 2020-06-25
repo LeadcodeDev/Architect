@@ -25,6 +25,7 @@ Route.get('/', async () => {
 })
 Route.group(() => {
 	Route.resource('users', 'UsersController').apiOnly()
+	Route.resource('roles', "RolesController").apiOnly()
 	Route.post('authentication/login', 'AuthController.login')
 	Route.post('authentication/logout', 'AuthController.logout')
 	Route.get('authentication/confirmation_token/:token', 'UsersController.confirmAccount')
