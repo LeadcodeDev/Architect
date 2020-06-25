@@ -25,8 +25,14 @@ Route.get('/', async () => {
 })
 Route.group(() => {
 	Route.resource('users', 'UsersController').apiOnly()
+	Route.resource('categories', 'CategoriesController').apiOnly()
+	Route.resource('products', 'ProductsController').apiOnly()
+	Route.resource('discounts', 'DiscountsController').apiOnly()
 	Route.post('authentication/login', 'AuthController.login')
 	Route.post('authentication/logout', 'AuthController.logout')
 	Route.get('authentication/confirmation_token/:token', 'UsersController.confirmAccount')
-	Route.post('cookie', 'CookiesController.allow')
+	Route.group(() => {
+		Route.post('/', 'CookiesController.allow')
+		Route.get('/:ip', 'CookiesController.show')
+	}).prefix('/cookie')
 }).prefix('/api')
