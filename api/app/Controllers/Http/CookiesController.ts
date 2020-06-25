@@ -7,10 +7,13 @@ export default class CookiesController {
 		const date = new Date()
 		const ip = request.input('ip')
 		const expiration = DateTime.fromJSDate(new Date(date.setMonth(date.getMonth() + 6)))
+		await Cookies.updateOrCreate({ ip }, { ip, expiration })
 
-		const searchPayload = { ip }
-		const persistancePayload = { ip, expiration }
+		return { message: 'Cookies are allow for user' + ip }
+	}
 
-		await Cookies.updateOrCreate(searchPayload, persistancePayload)
+	public async show({ params }: HttpContextContract) {
+		const cookie = await Cookies.findBy('ip', params.ip)
+		return { cookie }
 	}
 }

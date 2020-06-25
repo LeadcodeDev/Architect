@@ -1,3 +1,15 @@
-
+.cookies-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 25vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.cookies-banner .close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 
 /*# sourceMappingURL=app.css.map */
