@@ -12,8 +12,8 @@ export default class CategoryValidator {
 		price: schema.number(),
 		categoryId: schema.number.optional([rules.exists({ table: 'categories', column: 'id' })]),
 		discountId: schema.number.optional([rules.exists({ table: 'discounts', column: 'id' })]),
-		pictureId: schema.number.optional([rules.exists({ table: 'discounts', column: 'id' })]),
-		isVisible: schema.boolean()
+		pictures: schema.number([rules.exists({ table: 'discounts', column: 'id' })]),
+		isVisible: schema.boolean.optional()
 	})
 
 	/**
