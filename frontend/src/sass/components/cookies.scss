@@ -1,13 +1,24 @@
 .cookies-banner {
 	position: fixed;
+	z-index: 9999;
 	bottom: 0;
 	left: 0;
 	width: 100vw;
-	height: 25vh;
-	background-color: transparentize($primary-color, 0.5);
-	.close-button {
+	height: 72px;
+	background-color: black;
+	.cookies-container {
 		position: absolute;
-		right: 0;
-		top: 0;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		color: white;
+		letter-spacing: 1px;
+		font-weight: 300;
+	}
+	button {
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		transform: translate(-10%, -50%);
 	}
 }

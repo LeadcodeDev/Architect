@@ -40,9 +40,10 @@ const Cookies: React.SFC<CookiesProps> = () => {
 	if (!isAcceptCookies) {
 		return (
 			<Fade className='cookies-banner'>
-				<div className='close-button' onClick={() => handleChangeCookies(event)}>
-					X
-				</div>
+				<div className='cookies-container'>Ce site Web utilise des cookies pour vous garantir la meilleure expérience dd'utilisation et de visite sur notre site web</div>
+				<button className='btn btn-primary' onClick={() => handleChangeCookies(event)}>
+					J'accepte
+				</button>
 			</Fade>
 		)
 	} else {

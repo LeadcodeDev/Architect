@@ -1,0 +1,82 @@
+.navbar {
+	background-color: #fff;
+	position: sticky;
+	top: 0;
+	width: 100vw;
+	z-index: 9999;
+
+	@media screen and (min-width: 768px) {
+		padding: 0 50px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding: 0 150px;
+	}
+
+	.navbar-brand {
+		@media screen and (min-width: 768px) {
+			padding-right: 20px;
+		}
+
+		@media screen and (min-width: 1000px) {
+			padding-right: 100px;
+		}
+	}
+
+	.collapse {
+		@media screen and (min-width: 768px) {
+			padding: 20px 0;
+		}
+
+		@media screen and (min-width: 1000px) {
+			padding: 20px 0;
+		}
+		background-color: inherit;
+
+		.navbar-nav {
+			width: 100%;
+			.btn.btn-primary {
+				padding: 10px 28px !important;
+				border-radius: 25px;
+				margin: 0 5px;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.btn-icon {
+	position: relative;
+	border: 1px solid #eeeeee;
+	border-radius: 50%;
+	cursor: pointer;
+	margin: 0 5px;
+	width: 43px;
+	height: 43px;
+	i {
+		position: absolute;
+		font-size: 18px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #4e4e4e;
+	}
+}
+
+.searchbar {
+	display: inline-block;
+	border: 1px solid #eeeeee;
+	border-radius: 30px;
+	padding: 10px 20px;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	input {
+		border: none;
+		&:focus {
+			outline-offset: 0;
+			outline: none !important;
+		}
+	}
+}
