@@ -7,9 +7,11 @@
 		</b-carousel>
 		<section>
 			<div class="container py-5">
-				<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, consequatur?</h1>
-				<p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi explicabo voluptatem et perferendis consequatur. Officiis perspiciatis, alias reiciendis eligendi tempora, ipsa labore consequatur at illo fugiat voluptatem nam perferendis vel.</p>
+				<h1 class="py-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, consequatur?</h1>
 			</div>
+		</section>
+		<section>
+			<news />
 		</section>
 		<section>
 			<banner :items="items" title="Lorem ipsum dolor sit amet."></banner>
@@ -23,6 +25,7 @@
 <script>
 import Banner from '~/components/banner/banner.vue'
 import Reassure from '~/components/reassure/reassure.vue'
+import News from '~/components/news/news.vue'
 
 export default {
 	layout: 'master',
@@ -78,7 +81,8 @@ export default {
 	},
 	components: {
 		baner: Banner,
-		reassure: Reassure
+		reassure: Reassure,
+		news: News
 	}
 }
 </script>
