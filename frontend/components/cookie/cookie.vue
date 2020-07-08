@@ -1,10 +1,8 @@
 <template>
-	<div class="cookie" v-if="consent === false">
+	<div class="cookie" ref="cookie" v-if="consent === false">
 		<div class="container">
 			<p>
-				En navigant sur notre site web, vous acceptez l'utilisation de nos cookies. Nos cookies permettent le bon fonctionnement de nos services. Ils ne sont aucunement utilisé pour vous
-				"tracker"
-				{{ ip }} {{ consent }}
+				En navigant sur notre site web, vous acceptez l'utilisation de nos cookies. Nos cookies permettent le bon fonctionnement de nos services. Ils ne sont aucunement utilisé pour vous "tracker"
 			</p>
 			<div class="action">
 				<button class="btn btn-primary" @click.prevent="handleAccept">J'accepte</button>
@@ -19,10 +17,7 @@ import axios from 'axios'
 export default {
 	name: 'Cookie',
 	data: function () {
-		return {
-			ip: '',
-			consent: true
-		}
+		return { ip: '', consent: true }
 	},
 	mounted: async function () {
 		const { data } = await axios.get('https://ipapi.co/json/')

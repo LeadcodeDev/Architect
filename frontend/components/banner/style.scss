@@ -4,9 +4,9 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		padding: 5rem 0;
 		margin: auto;
 		@media screen and (min-width: 576px) {
+			padding: 5rem 0;
 			flex-direction: row;
 			justify-content: space-between;
 			width: 80%;
@@ -60,11 +60,13 @@
 		}
 		.pictures-side {
 			width: 100%;
+			padding-bottom: 3rem;
 			@media screen and (min-width: 576px) {
+				padding-bottom: initial;
 				width: 50%;
+				height: 40rem;
 			}
 			position: relative;
-			height: 40rem;
 			.behind {
 				position: absolute;
 				top: 0;
@@ -72,8 +74,10 @@
 				width: 100%;
 				height: 100%;
 				overflow: hidden;
+				display: none;
 				@media screen and (min-width: 576px) {
 					width: 70%;
+					display: block;
 				}
 				img {
 					width: 100%;
@@ -81,7 +85,6 @@
 					object-fit: cover;
 					transform: scale(2);
 					filter: brightness(80%);
-					// display: none;
 				}
 				h3 {
 					text-align: center;
@@ -102,14 +105,14 @@
 				}
 			}
 			.infront {
-				position: absolute;
-				top: 50%;
-				right: 0;
 				width: 100%;
-				height: 100%;
-				transform: translateY(-50%);
+				height: 50vh;
 				margin-top: 1rem;
 				@media screen and (min-width: 576px) {
+					transform: translateY(-50%);
+					position: absolute;
+					top: 50%;
+					right: 0;
 					margin-top: 0;
 					right: 15%;
 					width: 75%;
@@ -118,16 +121,23 @@
 				img {
 					width: 100%;
 					height: 100%;
+					object-fit: cover;
 				}
 			}
 		}
 	}
 	.banner-item:nth-child(even) {
 		.details-side {
-			order: 2;
+			order: 1;
+			@media screen and (min-width: 576px) {
+				order: 2;
+			}
 		}
 		.pictures-side {
-			order: 1;
+			order: 2;
+			@media screen and (min-width: 576px) {
+				order: 1;
+			}
 			.behind {
 				position: absolute;
 				top: 0;
@@ -149,7 +159,10 @@
 			}
 			.infront {
 				right: initial;
-				left: 15%;
+				left: initial;
+				@media screen and (min-width: 576px) {
+					left: 15%;
+				}
 			}
 		}
 	}
