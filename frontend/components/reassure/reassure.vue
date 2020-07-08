@@ -2,16 +2,16 @@
 	<div class="reassure" :style="height">
 		<div class="reassure-container">
 			<div class="reassure-item">
-				<b-icon icon="alarm-fill" font-scale="5"></b-icon>
-				<h5>Title</h5>
+				<b-icon icon="box-seam" font-scale="5"></b-icon>
+				<h5>Retrait en magasin</h5>
 			</div>
 			<div class="reassure-item">
-				<b-icon icon="alarm-fill" font-scale="5"></b-icon>
-				<h5>Title</h5>
+				<b-icon icon="lock" font-scale="5"></b-icon>
+				<h5>Sécurisé</h5>
 			</div>
 			<div class="reassure-item">
-				<b-icon icon="alarm-fill" font-scale="5"></b-icon>
-				<h5>Title</h5>
+				<b-icon icon="lightning-fill" font-scale="5"></b-icon>
+				<h5>Rapide</h5>
 			</div>
 		</div>
 	</div>

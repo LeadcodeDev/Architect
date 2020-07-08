@@ -6,9 +6,7 @@
 			<b-carousel-slide img-src="https://via.placeholder.com/1920x1080"> </b-carousel-slide>
 		</b-carousel>
 		<section>
-			<div class="container py-5">
-				<h1 class="py-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, consequatur?</h1>
-			</div>
+			<sample-text text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, consequatur?" />
 		</section>
 		<section>
 			<news />
@@ -26,6 +24,7 @@
 import Banner from '~/components/banner/banner.vue'
 import Reassure from '~/components/reassure/reassure.vue'
 import News from '~/components/news/news.vue'
+import SampleText from '~/components/sample-text/sample-text.vue'
 
 export default {
 	layout: 'master',
@@ -82,7 +81,8 @@ export default {
 	components: {
 		baner: Banner,
 		reassure: Reassure,
-		news: News
+		news: News,
+		'sample-text': SampleText
 	}
 }
 </script>

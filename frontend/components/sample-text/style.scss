@@ -1,0 +1,16 @@
+.sample-text {
+	padding: 2rem 0;
+	margin: auto;
+	width: 90%;
+	@media screen and (min-width: 576px) {
+		padding: 5rem 0;
+		width: 50%;
+	}
+	text-align: center;
+	h2 {
+		font-weight: 300;
+		@media screen and (min-width: 576px) {
+			font-size: 3rem;
+		}
+	}
+}

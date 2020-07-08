@@ -2,7 +2,7 @@
 	<div class="banner">
 		<div class="banner-item" v-for="item in items">
 			<div class="details-side">
-				<h2>{{ item.title }}</h2>
+				<sample-text :text="item.title" />
 				<div class="details-lasted">
 					<div class="card" v-for="card in item.card">
 						<h5 class="card-title">{{ card.card_title }}</h5>
@@ -28,11 +28,16 @@
 </template>
 
 <script>
+import SampleText from '~/components/sample-text/sample-text.vue'
+
 export default {
 	name: 'Banner',
 	props: {
 		items: Array,
 		title: String
+	},
+	components: {
+		'sample-text': SampleText
 	}
 }
 </script>

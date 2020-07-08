@@ -1,11 +1,20 @@
 .news {
 	display: flex;
-	width: 90%;
+	flex-direction: column;
+	width: 100%;
+	@media screen and (min-width: 576px) {
+		flex-direction: row;
+		width: 90%;
+		padding: 0 0 4rem 0;
+	}
 	margin: auto;
 	.news-lasted {
 		position: relative;
-		width: 40%;
+		width: 100%;
 		padding: 0.5rem;
+		@media screen and (min-width: 576px) {
+			width: 40%;
+		}
 		img {
 			width: 100%;
 			height: 100%;
@@ -33,7 +42,10 @@
 	.news-older {
 		display: flex;
 		flex-wrap: wrap;
-		width: 60%;
+		width: 100%;
+		@media screen and (min-width: 576px) {
+			width: 60%;
+		}
 		.item {
 			position: relative;
 			width: 50%;

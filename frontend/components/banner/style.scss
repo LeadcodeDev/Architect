@@ -16,15 +16,10 @@
 			@media screen and (min-width: 576px) {
 				width: 50%;
 			}
-			h2 {
-				font-size: 3rem;
-				font-weight: 300;
-				width: 90%;
-				margin: auto;
+			.sample-text {
+				padding: 3rem 0 0 0;
 				@media screen and (min-width: 576px) {
-					font-size: 4rem;
-					width: 80%;
-					padding-bottom: 2rem;
+					padding: 0;
 				}
 			}
 			.details-lasted {
@@ -44,9 +39,10 @@
 					text-align: center;
 					border: none;
 					width: 90%;
-					margin: auto;
+					margin: 0 auto 3rem auto;
 					@media screen and (min-width: 576px) {
 						width: 45%;
+						margin: auto;
 					}
 					h5 {
 						font-size: 1.5rem;
@@ -55,10 +51,14 @@
 						height: 255px;
 						object-fit: cover;
 					}
+					&:last-child {
+						margin: auto;
+					}
 				}
 			}
 		}
 		.pictures-side {
+			position: relative;
 			width: 100%;
 			padding-bottom: 3rem;
 			@media screen and (min-width: 576px) {
@@ -66,7 +66,9 @@
 				width: 50%;
 				height: 40rem;
 			}
-			position: relative;
+			&:last-child {
+				padding-bottom: initial;
+			}
 			.behind {
 				position: absolute;
 				top: 0;

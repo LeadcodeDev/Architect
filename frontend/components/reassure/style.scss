@@ -5,12 +5,23 @@
 		width: 90%;
 		margin: auto;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
+		@media screen and (min-width: 576px) {
+			flex-direction: row;
+		}
 		.reassure-item {
-			width: 33.33%;
+			width: 100%;
+			padding: 3rem 0;
+			@media screen and (min-width: 576px) {
+				width: 33.33%;
+				padding: initial;
+			}
 			color: white;
 			text-align: center;
 			h5 {
+				padding-top: 1rem;
+				width: 50%;
+				margin: auto;
 				font-size: 3rem;
 				font-weight: 300;
 			}
