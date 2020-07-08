@@ -8,8 +8,10 @@
 		<section>
 			<sample-text text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, consequatur?" />
 		</section>
+
 		<section>
-			<news />
+			<category />
+			<!-- <news /> -->
 		</section>
 		<section>
 			<banner :items="items" title="Lorem ipsum dolor sit amet."></banner>
@@ -25,6 +27,7 @@ import Banner from '~/components/banner/banner.vue'
 import Reassure from '~/components/reassure/reassure.vue'
 import News from '~/components/news/news.vue'
 import SampleText from '~/components/sample-text/sample-text.vue'
+import Category from '~/components/category/category.vue'
 
 export default {
 	layout: 'master',
@@ -82,7 +85,8 @@ export default {
 		baner: Banner,
 		reassure: Reassure,
 		news: News,
-		'sample-text': SampleText
+		'sample-text': SampleText,
+		category: Category
 	}
 }
 </script>
