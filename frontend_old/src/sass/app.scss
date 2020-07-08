@@ -1,0 +1,30 @@
+@import './components/configuration';
+@import './components/navbar';
+@import './components/carousel';
+@import './components/card';
+@import './components/announce';
+@import './components/main-images';
+@import './components/products-area';
+@import './components/cookies';
+
+html,
+body {
+	height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+img {
+	object-fit: cover;
+}
+
+.separator {
+	height: 100px;
+	width: 100vw;
+	background-color: $primary-color;
+}
+
+.form-loginout {
+	width: 40%;
+	margin: auto;
+}

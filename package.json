@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "api": "cd ./api && yarn start",
+    "front": "cd ./frontend && yarn dev"
+  }
+}

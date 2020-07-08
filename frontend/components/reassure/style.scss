@@ -1,0 +1,19 @@
+.reassure {
+	background-color: #005376;
+	padding: 3rem 0;
+	.reassure-container {
+		width: 90%;
+		margin: auto;
+		display: flex;
+		flex-direction: row;
+		.reassure-item {
+			width: 33.33%;
+			color: white;
+			text-align: center;
+			h5 {
+				font-size: 3rem;
+				font-weight: 300;
+			}
+		}
+	}
+}
