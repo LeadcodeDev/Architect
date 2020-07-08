@@ -1,6 +1,6 @@
 <template>
 	<b-navbar toggleable="lg" sticky>
-		<b-navbar-brand href="#">NavBar</b-navbar-brand>
+		<b-navbar-brand href="#">Navbar</b-navbar-brand>
 
 		<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

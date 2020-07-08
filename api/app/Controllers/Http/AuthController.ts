@@ -1,4 +1,3 @@
-import Users from 'App/Models/Users'
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
 export default class AuthController {
@@ -7,16 +6,8 @@ export default class AuthController {
 		const password = request.input('password')
 		const rememberUser = !!request.input('remember_me')
 
-		const testUser = await Users.findBy('email', email)
 		await auth.attempt(email, password, rememberUser)
-		if (auth.user) {
-			if (testUser?.isConfirmed) {
-				return auth.user
-			} else {
-				auth.logout()
-				return { message: 'Veuillez confirmer votre email', error: 403 }
-			}
-		}
+		return auth.user
 	}
 
 	public async logout({ auth }: HttpContextContract) {
@@ -27,7 +18,7 @@ export default class AuthController {
 		}
 	}
 
-	public async isLogin({ auth }: HttpContextContract) {
-		return await auth.authenticate()
+	public async auth({ auth }: HttpContextContract) {
+		return auth.user
 	}
 }
