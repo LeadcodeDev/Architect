@@ -13,10 +13,9 @@
 			<!-- Right aligned nav items -->
 			<b-navbar-nav class="ml-auto">
 				<b-nav-item-dropdown right v-if="auth" class="with-avatar">
-					<template v-slot:button-content>
-						<b-avatar></b-avatar>
-					</template>
-					<b-dropdown-item href="#">Profile</b-dropdown-item>
+					<template v-slot:button-content> <b-avatar></b-avatar> {{ identity }} </template>
+					<nuxt-link to="/" class="dropdown-item">Mon compte</nuxt-link>
+					<nuxt-link to="/authentication/login" class="dropdown-item" v-if="admin">Dashboard</nuxt-link>
 					<b-dropdown-item @click.prevent="handleLogout" href="#">Déconnexion</b-dropdown-item>
 				</b-nav-item-dropdown>
 				<nuxt-link v-else to="/authentication/login" class="btn btn-primary">Connexion</nuxt-link>
@@ -30,6 +29,12 @@ export default {
 	computed: {
 		auth() {
 			return this.$store.state.auth.member.logged
+		},
+		identity() {
+			return this.$store.state.auth.member.user.identity
+		},
+		admin() {
+			return this.$store.state.auth.member.user.permission == 'ROLE_ADMIN'
 		}
 	},
 	methods: {

@@ -53,9 +53,9 @@ export default {
 		handleSubmit: async function () {
 			try {
 				const { data } = await this.$axios.post('/authentication/login', this.form)
-				console.log(data)
 				if (data.is_confirmed) {
-					this.$store.commit('auth/login', { user: data.id, logged: true })
+					console.log(data)
+					this.$store.commit('auth/login', { user: { id: data.id, identity: data.firstname + ' ' + data.lastname, permission: data.permission }, logged: true })
 					this.$toast.success(`Bienvenue ${data.firstname}`)
 					this.$router.replace('/')
 				} else {

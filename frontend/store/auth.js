@@ -25,6 +25,6 @@ export const mutations = {
 	},
 	logout: function (state) {
 		this.$axios.get('http://localhost:3333/api/authentication/logout')
-		state.member = { ...state.member, user: {}, logged: false }
+		state.member = { ...state.member, user: { id: null, identity: '', permission: '' }, logged: false }
 	}
 }

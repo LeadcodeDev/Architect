@@ -10,7 +10,14 @@ export const actions = {
 	async storeDispatchFunc({ commit }) {
 		try {
 			const { data } = await this.$axios.get('/authentication/auth')
-			commit('auth/reload', { user: data.id, logged: true })
+			commit('auth/reload', {
+				user: {
+					id: data.id,
+					identity: data.firstname + ' ' + data.lastname,
+					permission: data.permission
+				},
+				logged: true
+			})
 		} catch (error) {
 			commit('auth/reload', { user: {}, logged: false })
 		}
