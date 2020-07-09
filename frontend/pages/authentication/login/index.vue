@@ -37,6 +37,7 @@
 <script>
 export default {
 	layout: 'master',
+	middleware: 'unauthenticated',
 	data() {
 		return {
 			form: {
