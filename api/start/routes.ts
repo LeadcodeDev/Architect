@@ -29,8 +29,9 @@ Route.group(() => {
 	Route.resource('products', 'ProductsController').apiOnly()
 	Route.resource('discounts', 'DiscountsController').apiOnly()
 	Route.post('authentication/login', 'AuthController.login')
-	Route.post('authentication/logout', 'AuthController.logout')
-	Route.get('authentication/confirmation_token/:token', 'UsersController.confirmAccount')
+	Route.get('authentication/logout', 'AuthController.logout')
+	Route.get('authentication/auth', 'AuthController.auth').middleware('auth')
+	Route.post('authentication/confirmation_token', 'UsersController.confirmAccount')
 	Route.group(() => {
 		Route.post('/', 'CookiesController.allow')
 		Route.get('/:ip', 'CookiesController.show')

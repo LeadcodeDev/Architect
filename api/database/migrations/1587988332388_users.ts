@@ -9,6 +9,7 @@ export default class UsersSchema extends BaseSchema {
 			table.string('email', 255).notNullable()
 			table.string('password', 180).notNullable()
 			table.string('remember_me_token').nullable()
+			table.string('permission').notNullable().defaultTo('ROLE_USER')
 			table.string('firstname').notNullable()
 			table.string('lastname').notNullable()
 			table.string('address').notNullable()
