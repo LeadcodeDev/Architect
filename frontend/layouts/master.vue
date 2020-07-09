@@ -22,4 +22,8 @@ export default {
 body {
 	overflow-x: hidden;
 }
+.errors-feedback {
+	color: red;
+	font-size: 14px;
+}
 </style>

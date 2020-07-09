@@ -31,7 +31,7 @@ Route.group(() => {
 	Route.post('authentication/login', 'AuthController.login')
 	Route.get('authentication/logout', 'AuthController.logout')
 	Route.get('authentication/auth', 'AuthController.auth').middleware('auth')
-	Route.get('authentication/confirmation_token/:token', 'UsersController.confirmAccount')
+	Route.post('authentication/confirmation_token', 'UsersController.confirmAccount')
 	Route.group(() => {
 		Route.post('/', 'CookiesController.allow')
 		Route.get('/:ip', 'CookiesController.show')

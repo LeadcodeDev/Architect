@@ -59,8 +59,7 @@ export default {
 		duration: 5000
 	},
 	loading: {
-		color: 'rgb(0, 118, 214)',
-		height: '4px'
+		color: 'rgb(0, 118, 214)'
 	},
 	/*
 	 ** Axios module configuration

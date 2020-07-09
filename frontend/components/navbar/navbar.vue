@@ -1,19 +1,23 @@
 <template>
 	<b-navbar toggleable="lg" sticky>
-		<b-navbar-brand href="#">Navbar</b-navbar-brand>
+		<nuxt-link to="/" class="navbar-brand">
+			<img src="~/assets/images/icon.png" alt="" />
+		</nuxt-link>
 
 		<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
 		<b-collapse id="nav-collapse" is-nav>
 			<b-navbar-nav>
-				<b-nav-item href="#">Link</b-nav-item>
-				<b-nav-item href="#" disabled>Disabled</b-nav-item>
+				<nuxt-link to="/" class="nav-link">Accueil</nuxt-link>
 			</b-navbar-nav>
 
 			<!-- Right aligned nav items -->
 			<b-navbar-nav class="ml-auto">
 				<b-nav-item-dropdown right v-if="auth" class="with-avatar">
-					<template v-slot:button-content> <b-avatar></b-avatar> {{ identity }} </template>
+					<template v-slot:button-content>
+						<b-avatar></b-avatar>
+						{{ identity }}
+					</template>
 					<nuxt-link to="/" class="dropdown-item">Mon compte</nuxt-link>
 					<nuxt-link to="/authentication/login" class="dropdown-item" v-if="admin">Dashboard</nuxt-link>
 					<b-dropdown-item @click.prevent="handleLogout" href="#">Déconnexion</b-dropdown-item>

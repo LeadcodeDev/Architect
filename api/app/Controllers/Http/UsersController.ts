@@ -12,44 +12,29 @@ export default class UsersController {
 	}
 
 	public async show({ params }: HttpContextContract) {
-		
-		const user = await Users.query()
-			.where("id", params.id)
-			.preload("roles", (rolesQuery) => {
-				rolesQuery.preload("permissions")
-			})
-			.firstOrFail()
-
-		return user.serialize()
-		
+		return await Users.query().where('id', params.id)
 	}
 
-	public async store({ request }: HttpContextContract) {
-		const { firstname, lastname, email, password, address, postalcode, city } = await request.validate(StoreValidator)
-		const user = await Users.create({ firstname, lastname, email, password, address, postalcode, city, tokenConfirmed: RandomString.generate() })
-
-		if (user.$isPersisted) {
-			await Mail({
-				from: Env.get('MAILER_USER'),
-				to: email,
-				subject: 'Test',
-				html: `<a href="http://localhost:3333/api/authentication/confirmation_token/${user.tokenConfirmed}">Click pour confirmer votre adresse email</a>`
-			})
-
-			return {
-				message: 'Le compte a bien été créé',
-				type: 'success'
+	public async store({ response, request }: HttpContextContract) {
+		try {
+			const { firstname, lastname, email, password, address, postalcode, city } = await request.validate(StoreValidator)
+			const user = await Users.create({ firstname, lastname, email, password, address, postalcode, city, tokenConfirmed: RandomString.generate() })
+			if (user.$isPersisted) {
+				await Mail({
+					from: Env.get('MAILER_USER'),
+					to: email,
+					subject: 'Confirmation de votre adresse email',
+					html: `<a href="http://localhost:3000/authentication/confirmation_email/${user.tokenConfirmed}">Click pour confirmer votre adresse email</a>`
+				})
+				return { message: 'Le compte a bien été créé', code: 200 }
 			}
-		} else {
-			return {
-				message: 'Une erreur est survenue',
-				type: 'danger'
-			}
+		} catch (error) {
+			return response.send(error.messages)
 		}
 	}
 
-	public async confirmAccount({ params }) {
-		await Users.query().where('token_confirmed', params.token).update({ is_confirmed: true, token_confirmed: '' })
+	public async confirmAccount({ request }) {
+		await Users.query().where('token_confirmed', request.input('token')).update({ is_confirmed: true, token_confirmed: '' })
 	}
 
 	public async update({ params, request }: HttpContextContract) {
