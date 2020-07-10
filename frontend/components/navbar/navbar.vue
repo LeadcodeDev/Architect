@@ -19,7 +19,7 @@
 						{{ identity }}
 					</template>
 					<nuxt-link to="/" class="dropdown-item">Mon compte</nuxt-link>
-					<nuxt-link to="/authentication/login" class="dropdown-item" v-if="admin">Dashboard</nuxt-link>
+					<nuxt-link to="/dashboard" class="dropdown-item" v-if="admin">Dashboard</nuxt-link>
 					<b-dropdown-item @click.prevent="handleLogout" href="#">Déconnexion</b-dropdown-item>
 				</b-nav-item-dropdown>
 				<nuxt-link v-else to="/authentication/login" class="btn btn-primary">Connexion</nuxt-link>

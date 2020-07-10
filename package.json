@@ -1,5 +1,6 @@
 {
 	"scripts": {
+		"installer": "cd ./api && yarn install && cd ../frontend && yarn install",
 		"api": "cd ./api && yarn start",
 		"front": "cd ./frontend && yarn dev"
 	}

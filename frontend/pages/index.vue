@@ -1,20 +1,9 @@
 <template>
 	<div>
-		<b-carousel
-			id="carousel-1"
-			v-model="slide"
-			:interval="4000"
-			controls
-			background="#ababab"
-			img-width="1080"
-			img-height="480"
-			style="text-shadow: 1px 1px 2px #333;"
-			@sliding-start="onSlideStart"
-			@sliding-end="onSlideEnd"
-		>
-			<b-carousel-slide img-src="https://via.placeholder.com/1920x1080"> </b-carousel-slide>
-			<b-carousel-slide img-src="https://via.placeholder.com/1920x1080"> </b-carousel-slide>
-			<b-carousel-slide img-src="https://via.placeholder.com/1920x1080"> </b-carousel-slide>
+		<b-carousel id="carousel-1" v-model="slide" :interval="4000" controls background="#ababab" img-width="1080" img-height="480" style="text-shadow: 1px 1px 2px #333;" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
+			<b-carousel-slide img-src="https://via.placeholder.com/1920x1080"></b-carousel-slide>
+			<b-carousel-slide img-src="https://via.placeholder.com/1920x1080"></b-carousel-slide>
+			<b-carousel-slide img-src="https://via.placeholder.com/1920x1080"></b-carousel-slide>
 		</b-carousel>
 		<section>
 			<sample-text text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, consequatur?" />
@@ -41,7 +30,7 @@ import SampleText from '~/components/sample-text/sample-text.vue'
 import Category from '~/components/category/category.vue'
 
 export default {
-	layout: 'master',
+	layout: 'master/index',
 	data() {
 		return {
 			slide: 0,

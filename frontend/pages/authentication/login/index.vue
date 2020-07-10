@@ -36,7 +36,7 @@
 
 <script>
 export default {
-	layout: 'master',
+	layout: 'master/index',
 	middleware: 'unauthenticated',
 	data() {
 		return {

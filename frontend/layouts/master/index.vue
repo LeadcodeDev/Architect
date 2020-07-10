@@ -18,12 +18,4 @@ export default {
 }
 </script>
 
-<style>
-body {
-	overflow-x: hidden;
-}
-.errors-feedback {
-	color: red;
-	font-size: 14px;
-}
-</style>
+<style scoped lang="scss" src="./style.scss"></style>
